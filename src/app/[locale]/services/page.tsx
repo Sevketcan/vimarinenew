@@ -3,55 +3,58 @@ import { Link } from "@/i18n/routing";
 import { Wrench, Zap, Plug2, Cpu, LayoutGrid, Lightbulb, Radio, BarChart3 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { getTranslations } from "next-intl/server";
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+    const t = await getTranslations('ServicesPage');
+
     const services = [
         {
             id: "repair",
-            title: "Fault Detection & Repair",
-            description: "We utilize advanced diagnostic tools to identify and rectify electrical faults efficiently, minimizing vessel downtime.",
+            title: t('Services.repair.title'),
+            description: t('Services.repair.description'),
             icon: Wrench,
         },
         {
             id: "installation",
-            title: "Electrical System Installation",
-            description: "From main switchboards to distribution panels, we handle complete electrical system installations for new builds and retrofits.",
+            title: t('Services.installation.title'),
+            description: t('Services.installation.description'),
             icon: Zap,
         },
         {
             id: "cabling",
-            title: "Cabling",
-            description: "Professional marine cabling services, ensuring safety and compliance with international maritime standards.",
+            title: t('Services.cabling.title'),
+            description: t('Services.cabling.description'),
             icon: Plug2,
         },
         {
             id: "automation",
-            title: "Automation & System Modifications",
-            description: "Upgrading and modifying alarm monitoring systems, power management systems, and engine control systems.",
+            title: t('Services.automation.title'),
+            description: t('Services.automation.description'),
             icon: Cpu,
         },
         {
             id: "panel",
-            title: "Panel Manufacturing & Installation",
-            description: "Custom design and manufacturing of main switchboards, starter panels, and distribution boards.",
+            title: t('Services.panel.title'),
+            description: t('Services.panel.description'),
             icon: LayoutGrid,
         },
         {
             id: "lighting",
-            title: "Lighting & Ex-proof Solutions",
-            description: "Installation and maintenance of navigation lights, deck lighting, and explosion-proof equipment for hazardous areas.",
+            title: t('Services.lighting.title'),
+            description: t('Services.lighting.description'),
             icon: Lightbulb,
         },
         {
             id: "communication",
-            title: "Communication Systems",
-            description: "Setup and maintenance of internal communication systems, PA systems, and network infrastructure.",
+            title: t('Services.communication.title'),
+            description: t('Services.communication.description'),
             icon: Radio,
         },
         {
             id: "energy",
-            title: "Energy Consumption Analysis",
-            description: "Installation of kWh meters and analysis of power consumption to optimize energy efficiency.",
+            title: t('Services.energy.title'),
+            description: t('Services.energy.description'),
             icon: BarChart3,
         },
     ];
@@ -70,9 +73,9 @@ export default function ServicesPage() {
                 </div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="max-w-3xl mx-auto text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">Our Services</h1>
+                        <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">{t('Hero.title')}</h1>
                         <p className="text-xl text-gray-300">
-                            Delivering comprehensive electrical and electronic solutions for the modern maritime industry.
+                            {t('Hero.subtitle')}
                         </p>
                     </div>
                 </div>
@@ -93,7 +96,7 @@ export default function ServicesPage() {
                                 <CardContent className="flex flex-col flex-1">
                                     <p className="text-muted-foreground mb-6">{service.description}</p>
                                     <Link href="/contact" className="mt-auto">
-                                        <Button variant="outline" className="w-full">Request Quote</Button>
+                                        <Button variant="outline" className="w-full">{t('Common.requestQuote')}</Button>
                                     </Link>
                                 </CardContent>
                             </Card>
@@ -107,27 +110,27 @@ export default function ServicesPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1">
-                            <h2 className="text-3xl font-bold font-heading mb-6">Advanced Panel Manufacturing</h2>
+                            <h2 className="text-3xl font-bold font-heading mb-6">{t('Feature.title')}</h2>
                             <p className="text-muted-foreground mb-6">
-                                Our state-of-the-art facility allows us to design and manufacture custom electrical panels that meet the specific needs of your vessel. We ensure all our products comply with class society regulations and international standards.
+                                {t('Feature.description')}
                             </p>
                             <ul className="space-y-3 mb-8">
                                 <li className="flex items-center text-muted-foreground">
                                     <span className="w-2 h-2 bg-marine-blue rounded-full mr-3" />
-                                    Custom Main Switchboards
+                                    {t('Feature.list.switchboards')}
                                 </li>
                                 <li className="flex items-center text-muted-foreground">
                                     <span className="w-2 h-2 bg-marine-blue rounded-full mr-3" />
-                                    Motor Control Centers (MCC)
+                                    {t('Feature.list.mcc')}
                                 </li>
                                 <li className="flex items-center text-muted-foreground">
                                     <span className="w-2 h-2 bg-marine-blue rounded-full mr-3" />
-                                    Distribution Boards
+                                    {t('Feature.list.distribution')}
                                 </li>
                             </ul>
                             <Link href="/contact">
                                 <Button className="bg-marine-blue hover:bg-marine-blue/90 text-white">
-                                    Contact Engineering Team
+                                    {t('Feature.cta')}
                                 </Button>
                             </Link>
                         </div>

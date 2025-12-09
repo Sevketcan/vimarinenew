@@ -11,5 +11,156 @@
         "title": "Empowering Your Marine Electrical & Electronic Systems",
         "subtitle": "Providing reliable, efficient, and innovative solutions for ships worldwide.",
         "learnMore": "Learn More"
+    },
+    "ServicesPage": {
+        "Hero": {
+            "title": "Our Services",
+            "subtitle": "Delivering comprehensive electrical and electronic solutions for the modern maritime industry."
+        },
+        "Services": {
+            "repair": {
+                "title": "Fault Detection & Repair",
+                "description": "We utilize advanced diagnostic tools to identify and rectify electrical faults efficiently, minimizing vessel downtime."
+            },
+            "installation": {
+                "title": "Electrical System Installation",
+                "description": "From main switchboards to distribution panels, we handle complete electrical system installations for new builds and retrofits."
+            },
+            "cabling": {
+                "title": "Cabling",
+                "description": "Professional marine cabling services, ensuring safety and compliance with international maritime standards."
+            },
+            "automation": {
+                "title": "Automation & System Modifications",
+                "description": "Upgrading and modifying alarm monitoring systems, power management systems, and engine control systems."
+            },
+            "panel": {
+                "title": "Panel Manufacturing & Installation",
+                "description": "Custom design and manufacturing of main switchboards, starter panels, and distribution boards."
+            },
+            "lighting": {
+                "title": "Lighting & Ex-proof Solutions",
+                "description": "Installation and maintenance of navigation lights, deck lighting, and explosion-proof equipment for hazardous areas."
+            },
+            "communication": {
+                "title": "Communication Systems",
+                "description": "Setup and maintenance of internal communication systems, PA systems, and network infrastructure."
+            },
+            "energy": {
+                "title": "Energy Consumption Analysis",
+                "description": "Installation of kWh meters and analysis of power consumption to optimize energy efficiency."
+            }
+        },
+        "Feature": {
+            "title": "Advanced Panel Manufacturing",
+            "description": "Our state-of-the-art facility allows us to design and manufacture custom electrical panels that meet the specific needs of your vessel. We ensure all our products comply with class society regulations and international standards.",
+            "list": {
+                "switchboards": "Custom Main Switchboards",
+                "mcc": "Motor Control Centers (MCC)",
+                "distribution": "Distribution Boards"
+            },
+            "cta": "Contact Engineering Team"
+        },
+        "Common": {
+            "requestQuote": "Request Quote"
+        }
+    },
+    "AboutPage": {
+        "Hero": {
+            "title": "Our Story",
+            "subtitle": "Founded with a passion for maritime excellence, Vimarine has grown into a trusted partner for shipowners and operators worldwide."
+        },
+        "Story": {
+            "title": "A Legacy of Excellence",
+            "description": "Since our inception, we have been dedicated to providing top-tier electrical and electronic services to the marine industry. Our team of certified engineers and technicians brings decades of combined experience to every project, ensuring that your vessels operate safely and efficiently."
+        },
+        "Vision": {
+            "title": "Values & Vision",
+            "visionTitle": "Our Vision",
+            "visionText": "To be a trusted name in marine electrical and electronic services, providing innovative solutions that ensure smooth operations for vessels worldwide.",
+            "valuesTitle": "Our Values",
+            "values": {
+                "reliability": "Reliability & Integrity",
+                "innovation": "Innovation & Excellence",
+                "safety": "Safety First",
+                "satisfaction": "Customer Satisfaction"
+            }
+        },
+        "Team": {
+            "title": "Meet Our Team",
+            "subtitle": "The experts behind our success.",
+            "members": {
+                "engin": {
+                    "role": "Chief Engineer",
+                    "bio": "Over 20 years of experience in marine electrical systems and automation."
+                },
+                "ayse": {
+                    "role": "Technical Manager",
+                    "bio": "Expert in project management and marine safety regulations."
+                },
+                "mehmet": {
+                    "role": "Senior Superintendent",
+                    "bio": "Specialist in high-voltage systems and troubleshooting."
+                }
+            }
+        }
+    },
+    "ContactPage": {
+        "Hero": {
+            "title": "Get in Touch",
+            "subtitle": "Ready to upgrade your marine systems? Contact us for a quote or consultation."
+        },
+        "Form": {
+            "title": "Send us a Message",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phone": "Phone (Optional)",
+            "message": "Message",
+            "placeholders": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "email": "john@example.com",
+                "phone": "+1 (555) 000-0000",
+                "message": "How can we help you?"
+            },
+            "submit": "Send Message"
+        },
+        "Info": {
+            "phone": "Phone",
+            "email": "Email",
+            "location": "Location",
+            "hours": "Working Hours",
+            "hoursText": "Mon - Fri: 08:00 - 18:00",
+            "emergency": "24/7 Emergency Support"
+        }
+    },
+    "ReferencesPage": {
+        "Hero": {
+            "title": "Our Trusted Partners",
+            "subtitle": "We are proud to work with leading shipping companies and shipyards around the globe."
+        },
+        "Projects": {
+            "title": "Featured Projects",
+            "atlantic": {
+                "title": "MV Atlantic Titan - Full Electrical Retrofit",
+                "description": "Complete overhaul of the main switchboard and power management system during dry dock in Singapore. The project was completed 2 days ahead of schedule."
+            },
+            "lng": {
+                "title": "LNG Carrier Automation Upgrade",
+                "description": "Upgraded the cargo monitoring and control system for a fleet of 3 LNG carriers, improving safety and operational efficiency."
+            }
+        },
+        "Testimonials": {
+            "title": "What Our Clients Say",
+            "michael": {
+                "quote": "Vimarine's team demonstrated exceptional technical knowledge and professionalism. They are our go-to partner for all electrical matters.",
+                "role": "Fleet Manager"
+            },
+            "sarah": {
+                "quote": "Reliable, efficient, and cost-effective. We highly recommend Vimarine for their outstanding service and support.",
+                "role": "Technical Director"
+            }
+        }
     }
 }

@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { getTranslations } from "next-intl/server";
 
-export default function ReferencesPage() {
+export default async function ReferencesPage() {
+    const t = await getTranslations('ReferencesPage');
+
     const partners = [
         { name: "Blue Wave Shipping", logo: "/images/logo-blue-wave.png" },
         { name: "Global Marine", logo: "/images/logo-global-marine.png" },
@@ -13,27 +16,27 @@ export default function ReferencesPage() {
 
     const projects = [
         {
-            title: "MV Atlantic Titan - Full Electrical Retrofit",
-            description: "Complete overhaul of the main switchboard and power management system during dry dock in Singapore. The project was completed 2 days ahead of schedule.",
+            title: t('Projects.atlantic.title'),
+            description: t('Projects.atlantic.description'),
             image: "/images/project-retrofit.png",
         },
         {
-            title: "LNG Carrier Automation Upgrade",
-            description: "Upgraded the cargo monitoring and control system for a fleet of 3 LNG carriers, improving safety and operational efficiency.",
+            title: t('Projects.lng.title'),
+            description: t('Projects.lng.description'),
             image: "/images/service-schematic.png", // Reusing schematic image for variety
         },
     ];
 
     const testimonials = [
         {
-            quote: "Vimarine's team demonstrated exceptional technical knowledge and professionalism. They are our go-to partner for all electrical matters.",
+            quote: t('Testimonials.michael.quote'),
             author: "Capt. Michael Chen",
-            role: "Fleet Manager, Blue Wave Shipping",
+            role: t('Testimonials.michael.role') + ", Blue Wave Shipping",
         },
         {
-            quote: "Reliable, efficient, and cost-effective. We highly recommend Vimarine for their outstanding service and support.",
+            quote: t('Testimonials.sarah.quote'),
             author: "Sarah Johnson",
-            role: "Technical Director, Global Marine",
+            role: t('Testimonials.sarah.role') + ", Global Marine",
         },
     ];
 
@@ -42,9 +45,9 @@ export default function ReferencesPage() {
             {/* Hero Section */}
             <section className="bg-slate-50 py-20">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-foreground">Our Trusted Partners</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-foreground">{t('Hero.title')}</h1>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        We are proud to work with leading shipping companies and shipyards around the globe.
+                        {t('Hero.subtitle')}
                     </p>
                 </div>
             </section>
@@ -72,7 +75,7 @@ export default function ReferencesPage() {
             {/* Featured Projects */}
             <section className="py-20 bg-slate-50">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold font-heading mb-12 text-center">Featured Projects</h2>
+                    <h2 className="text-3xl font-bold font-heading mb-12 text-center">{t('Projects.title')}</h2>
                     <div className="space-y-12">
                         {projects.map((project, index) => (
                             <div key={index} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 lg:gap-12 items-center`}>
@@ -99,7 +102,7 @@ export default function ReferencesPage() {
             {/* Testimonials */}
             <section className="py-20 bg-marine-blue text-white">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold font-heading mb-12 text-center">What Our Clients Say</h2>
+                    <h2 className="text-3xl font-bold font-heading mb-12 text-center">{t('Testimonials.title')}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {testimonials.map((item, index) => (
                             <Card key={index} className="bg-white/10 border-none text-white">

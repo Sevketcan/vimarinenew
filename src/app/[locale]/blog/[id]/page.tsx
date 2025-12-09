@@ -1,89 +1,21 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ArrowLeft, Calendar, User, Clock, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-
-// This would typically come from a database or CMS
-const posts = [
-    {
-        id: "1",
-        title: "The Future of Marine Automation: Trends to Watch in 2025",
-        excerpt: "Explore the latest advancements in autonomous shipping, AI-driven diagnostics, and remote monitoring systems that are reshaping the maritime industry.",
-        content: `
-            <p className="mb-4">The maritime industry is on the brink of a technological revolution. As we approach 2025, automation is no longer just a buzzword but a reality that is transforming how ships are operated, maintained, and managed.</p>
-            
-            <h3 className="text-2xl font-bold mt-8 mb-4">Autonomous Shipping</h3>
-            <p className="mb-4">Autonomous ships are set to redefine logistics. With advanced sensors and AI algorithms, these vessels can navigate complex routes with minimal human intervention, increasing safety and efficiency.</p>
-            
-            <h3 className="text-2xl font-bold mt-8 mb-4">AI-Driven Diagnostics</h3>
-            <p className="mb-4">Predictive maintenance powered by AI is becoming the standard. By analyzing data from various sensors, onboard systems can predict failures before they happen, saving millions in downtime and repair costs.</p>
-            
-            <h3 className="text-2xl font-bold mt-8 mb-4">Remote Monitoring</h3>
-            <p className="mb-4">Real-time remote monitoring allows onshore teams to assist crews in troubleshooting complex issues, ensuring that expert advice is always available, regardless of the vessel's location.</p>
-        `,
-        image: "/images/blog-tech.png",
-        category: "Technology",
-        date: "October 15, 2025",
-        author: "Engin Yılmaz",
-        readTime: "5 min read"
-    },
-    {
-        id: "2",
-        title: "Navigating the Green Transition: Electrical Solutions for Sustainable Shipping",
-        excerpt: "How retrofitting vessels with energy-efficient electrical systems and hybrid power solutions can help meet new environmental regulations.",
-        content: `
-          <p className="mb-4">With stricter environmental regulations coming into force, the shipping industry is under pressure to reduce its carbon footprint. Electrical solutions are at the forefront of this green transition.</p>
-
-          <h3 className="text-2xl font-bold mt-8 mb-4">Hybrid Power Systems</h3>
-          <p className="mb-4">Hybrid systems that combine traditional engines with battery storage are proving to be a game-changer. They allow vessels to operate more efficiently, reducing fuel consumption and emissions.</p>
-
-          <h3 className="text-2xl font-bold mt-8 mb-4">Shore Power Connectivity</h3>
-          <p className="mb-4">Connecting to shore power while at port (cold ironing) eliminates emissions from auxiliary engines. We are seeing a surge in demand for retrofitting vessels with shore power connection systems.</p>
-
-          <h3 className="text-2xl font-bold mt-8 mb-4">Energy Efficient Lighting and Motors</h3>
-          <p className="mb-4">Simple upgrades like switching to LED lighting and high-efficiency motors can have a significant cumulative impact on a vessel's overall energy consumption.</p>
-        `,
-        image: "/images/blog-green.png",
-        category: "Sustainability",
-        date: "September 28, 2025",
-        author: "Ayşe Demir",
-        readTime: "4 min read"
-    },
-    {
-        id: "3",
-        title: "Essential Electrical Maintenance Checklist for Dry Docking",
-        excerpt: "A comprehensive guide to preparing your vessel's electrical systems for dry dock inspections and maintenance to ensure safety and compliance.",
-        content: `
-          <p className="mb-4">Dry docking is a critical period for any vessel. It's the perfect opportunity to perform deep maintenance on electrical systems that is otherwise impossible while at sea.</p>
-
-          <h3 className="text-2xl font-bold mt-8 mb-4">Main Switchboard Inspection</h3>
-          <p className="mb-4">A thorough cleaning and tightening of connections in the main switchboard is essential using thermal imaging to detect hotspots.</p>
-
-          <h3 className="text-2xl font-bold mt-8 mb-4">Generator Maintenance</h3>
-          <p className="mb-4">Overhauling generators and testing their protection systems ensures reliability for the next sailing period.</p>
-
-          <h3 className="text-2xl font-bold mt-8 mb-4">Emergency Systems Test</h3>
-          <p className="mb-4">Testing emergency lighting, alarms, and backup power sources is non-negotiable for safety compliance.</p>
-        `,
-        image: "/images/blog-safety.png",
-        category: "Maintenance",
-        date: "September 10, 2025",
-        author: "Mehmet Kaya",
-        readTime: "6 min read"
-    },
-];
+import { getPostData, getSortedPostsData } from "@/lib/blog";
+import { marked } from 'marked';
 
 export async function generateStaticParams() {
+    const posts = getSortedPostsData();
     return posts.map((post) => ({
         id: post.id,
     }));
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
-    // Await params first
     const resolvedParams = await params;
-    const post = posts.find(p => p.id === resolvedParams.id);
+    const post = getPostData(resolvedParams.id);
 
     if (!post) {
         return (
@@ -95,6 +27,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
             </div>
         );
     }
+
+    const contentHtml = await marked(post.content);
 
     return (
         <article className="min-h-screen bg-white">
@@ -138,7 +72,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
                     <div className="lg:col-span-8">
                         <div
                             className="prose prose-lg max-w-none text-slate-700 prose-headings:font-heading prose-headings:text-slate-900 prose-a:text-marine-blue"
-                            dangerouslySetInnerHTML={{ __html: post.content }}
+                            dangerouslySetInnerHTML={{ __html: contentHtml }}
                         />
                     </div>
 

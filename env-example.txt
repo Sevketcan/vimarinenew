@@ -1,0 +1,11 @@
+# GitHub Configuration for Blog CMS
+# Create a Personal Access Token (PAT) with 'repo' scope at https://github.com/settings/tokens
+GITHUB_TOKEN=your_github_pat_here
+
+# Repository Details
+GITHUB_REPO_OWNER=Sevketcan
+GITHUB_REPO_NAME=vimarinenew
+
+# Admin Security
+# Set a password to protect the blog creation form
+ADMIN_PASSWORD=secure_password_here

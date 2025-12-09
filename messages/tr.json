@@ -11,5 +11,156 @@
         "title": "Deniz Elektrik ve Elektronik Sistemlerinizi Güçlendiriyoruz",
         "subtitle": "Dünya çapındaki gemiler için güvenilir, verimli ve yenilikçi çözümler sunuyoruz.",
         "learnMore": "Daha Fazla Bilgi"
+    },
+    "ServicesPage": {
+        "Hero": {
+            "title": "Hizmetlerimiz",
+            "subtitle": "Modern denizcilik endüstrisi için kapsamlı elektrik ve elektronik çözümler sunuyoruz."
+        },
+        "Services": {
+            "repair": {
+                "title": "Arıza Tespiti ve Onarım",
+                "description": "Elektrik arızalarını verimli bir şekilde tespit edip onarmak ve gemi bekleme süresini en aza indirmek için gelişmiş teşhis araçları kullanıyoruz."
+            },
+            "installation": {
+                "title": "Elektrik Sistemi Kurulumu",
+                "description": "Ana panolardan dağıtım panellerine kadar, yeni inşa ve yenileme projeleri için eksiksiz elektrik sistemi kurulumlarını gerçekleştiriyoruz."
+            },
+            "cabling": {
+                "title": "Kablolama",
+                "description": "Uluslararası denizcilik standartlarına uygun, güvenli profesyonel gemi kablolama hizmetleri."
+            },
+            "automation": {
+                "title": "Otomasyon ve Sistem Modifikasyonları",
+                "description": "Alarm izleme sistemleri, güç yönetim sistemleri ve motor kontrol sistemlerinin yükseltilmesi ve modifikasyonu."
+            },
+            "panel": {
+                "title": "Pano Üretimi ve Kurulumu",
+                "description": "Ana panolar, yol verici paneller ve dağıtım panolarının özel tasarımı ve üretimi."
+            },
+            "lighting": {
+                "title": "Aydınlatma ve Ex-proof Çözümler",
+                "description": "Seyir fenerleri, güverte aydınlatması ve tehlikeli alanlar için patlamaya dayanıklı ekipmanların kurulumu ve bakımı."
+            },
+            "communication": {
+                "title": "Haberleşme Sistemleri",
+                "description": "Dahili haberleşme sistemleri, anons sistemleri ve ağ altyapısının kurulumu ve bakımı."
+            },
+            "energy": {
+                "title": "Enerji Tüketim Analizi",
+                "description": "Enerji verimliliğini optimize etmek için kWh sayaçlarının kurulumu ve güç tüketiminin analizi."
+            }
+        },
+        "Feature": {
+            "title": "Gelişmiş Pano Üretimi",
+            "description": "Son teknoloji tesisimiz, geminizin özel ihtiyaçlarını karşılayan özel elektrik panoları tasarlamamıza ve üretmemize olanak tanır. Tüm ürünlerimizin klas kuruluşu düzenlemelerine ve uluslararası standartlara uygun olmasını sağlıyoruz.",
+            "list": {
+                "switchboards": "Özel Ana Panolar (Main Switchboards)",
+                "mcc": "Motor Kontrol Merkezleri (MCC)",
+                "distribution": "Dağıtım Panoları"
+            },
+            "cta": "Mühendislik Ekibiyle İletişime Geçin"
+        },
+        "Common": {
+            "requestQuote": "Teklif İste"
+        }
+    },
+    "AboutPage": {
+        "Hero": {
+            "title": "Hikayemiz",
+            "subtitle": "Denizcilik mükemmelliği tutkusuyla kurulan Vimarine, dünya çapındaki gemi sahipleri ve operatörleri için güvenilir bir ortak haline gelmiştir."
+        },
+        "Story": {
+            "title": "Mükemmellik Mirası",
+            "description": "Kuruluşumuzdan bu yana, denizcilik endüstrisine üst düzey elektrik ve elektronik hizmetleri sunmaya kendimizi adadık. Sertifikalı mühendis ve teknisyen ekibimiz, gemilerinizin güvenli ve verimli çalışmasını sağlamak için her projeye onlarca yıllık tecrübeyi aktarmaktadır."
+        },
+        "Vision": {
+            "title": "Değerler ve Vizyon",
+            "visionTitle": "Vizyonumuz",
+            "visionText": "Deniz elektrik ve elektronik hizmetlerinde güvenilir bir isim olmak, dünya çapındaki gemiler için sorunsuz operasyonlar sağlayan yenilikçi çözümler sunmak.",
+            "valuesTitle": "Değerlerimiz",
+            "values": {
+                "reliability": "Güvenilirlik ve Dürüstlük",
+                "innovation": "Yenilik ve Mükemmellik",
+                "safety": "Önce Güvenlik",
+                "satisfaction": "Müşteri Memnuniyeti"
+            }
+        },
+        "Team": {
+            "title": "Ekibimizle Tanışın",
+            "subtitle": "Başarımızın arkasındaki uzmanlar.",
+            "members": {
+                "engin": {
+                    "role": "Baş Mühendis",
+                    "bio": "Deniz elektrik sistemleri ve otomasyonunda 20 yılı aşkın deneyim."
+                },
+                "ayse": {
+                    "role": "Teknik Müdür",
+                    "bio": "Proje yönetimi ve deniz güvenlik yönetmelikleri uzmanı."
+                },
+                "mehmet": {
+                    "role": "Kıdemli Enspektör",
+                    "bio": "Yüksek gerilim sistemleri ve arıza giderme uzmanı."
+                }
+            }
+        }
+    },
+    "ContactPage": {
+        "Hero": {
+            "title": "İletişime Geçin",
+            "subtitle": "Deniz sistemlerinizi yükseltmeye hazır mısınız? Teklif veya danışmanlık için bizimle iletişime geçin."
+        },
+        "Form": {
+            "title": "Bize Mesaj Gönderin",
+            "firstName": "Adınız",
+            "lastName": "Soyadınız",
+            "email": "E-posta",
+            "phone": "Telefon (İsteğe Bağlı)",
+            "message": "Mesajınız",
+            "placeholders": {
+                "firstName": "Ahmet",
+                "lastName": "Yılmaz",
+                "email": "ahmet@ornek.com",
+                "phone": "+90 (555) 000-0000",
+                "message": "Size nasıl yardımcı olabiliriz?"
+            },
+            "submit": "Mesaj Gönder"
+        },
+        "Info": {
+            "phone": "Telefon",
+            "email": "E-posta",
+            "location": "Konum",
+            "hours": "Çalışma Saatleri",
+            "hoursText": "Pzt - Cum: 08:00 - 18:00",
+            "emergency": "7/24 Acil Destek"
+        }
+    },
+    "ReferencesPage": {
+        "Hero": {
+            "title": "Güvenilir Ortaklarımız",
+            "subtitle": "Dünya çapındaki önde gelen nakliye şirketleri ve tersanelerle çalışmaktan gurur duyuyoruz."
+        },
+        "Projects": {
+            "title": "Öne Çıkan Projeler",
+            "atlantic": {
+                "title": "MV Atlantic Titan - Tam Elektrik Yenileme",
+                "description": "Singapur'daki kuru havuz sırasında ana pano ve güç yönetim sisteminin tamamen elden geçirilmesi. Proje planlanandan 2 gün önce tamamlandı."
+            },
+            "lng": {
+                "title": "LNG Tankeri Otomasyon Yükseltmesi",
+                "description": "3 LNG tankerinden oluşan bir filo için kargo izleme ve kontrol sistemi yükseltildi, güvenlik ve operasyonel verimlilik artırıldı."
+            }
+        },
+        "Testimonials": {
+            "title": "Müşterilerimiz Ne Diyor",
+            "michael": {
+                "quote": "Vimarine ekibi olağanüstü teknik bilgi ve profesyonellik sergiledi. Tüm elektrik konularında başvuracağımız ortağımız onlar.",
+                "role": "Filo Müdürü"
+            },
+            "sarah": {
+                "quote": "Güvenilir, verimli ve uygun maliyetli. Üstün hizmet ve destekleri için Vimarine'i şiddetle tavsiye ediyoruz.",
+                "role": "Teknik Direktör"
+            }
+        }
     }
 }

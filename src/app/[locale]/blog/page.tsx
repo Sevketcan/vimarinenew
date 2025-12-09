@@ -1,40 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { getSortedPostsData } from "@/lib/blog";
 
 export default function BlogPage() {
-    const posts = [
-        {
-            id: 1,
-            title: "The Future of Marine Automation: Trends to Watch in 2025",
-            excerpt: "Explore the latest advancements in autonomous shipping, AI-driven diagnostics, and remote monitoring systems that are reshaping the maritime industry.",
-            image: "/images/blog-tech.png",
-            category: "Technology",
-            date: "October 15, 2025",
-            author: "Engin Yılmaz",
-        },
-        {
-            id: 2,
-            title: "Navigating the Green Transition: Electrical Solutions for Sustainable Shipping",
-            excerpt: "How retrofitting vessels with energy-efficient electrical systems and hybrid power solutions can help meet new environmental regulations.",
-            image: "/images/blog-green.png",
-            category: "Sustainability",
-            date: "September 28, 2025",
-            author: "Ayşe Demir",
-        },
-        {
-            id: 3,
-            title: "Essential Electrical Maintenance Checklist for Dry Docking",
-            excerpt: "A comprehensive guide to preparing your vessel's electrical systems for dry dock inspections and maintenance to ensure safety and compliance.",
-            image: "/images/blog-safety.png",
-            category: "Maintenance",
-            date: "September 10, 2025",
-            author: "Mehmet Kaya",
-        },
-    ];
+    const posts = getSortedPostsData();
 
     return (
         <div className="flex flex-col min-h-screen">
@@ -86,9 +59,11 @@ export default function BlogPage() {
                                     </p>
                                 </CardContent>
                                 <CardFooter>
-                                    <Button variant="link" className="text-marine-blue p-0 h-auto font-semibold group">
-                                        Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                    </Button>
+                                    <Link href={`/blog/${post.id}`} className="block w-full">
+                                        <Button variant="link" className="text-marine-blue p-0 h-auto font-semibold group">
+                                            Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                        </Button>
+                                    </Link>
                                 </CardFooter>
                             </Card>
                         ))}
